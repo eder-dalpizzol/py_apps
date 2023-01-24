@@ -1,6 +1,8 @@
 import PySimpleGUI as sg
 import os.path
 
+sg.theme("Rasn")
+
 file_list_column = [
   [
     sg.Text("Image Folder"),
