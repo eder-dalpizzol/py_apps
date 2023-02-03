@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Movimentação de Produto</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@material-ui/core@latest/umd/material-ui.min.css"
+    />
+    <style>
+      .container {
+        background-color: #9374a1;
+        height: 100vh;
+      }
+      table {
+        width: 80%;
+        margin: 0 auto;
+        border-collapse: collapse;
+        border: 1px solid rgb(0, 0, 0);
+      }
+      th, td {
+        border: 4px solid #4c3c53;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: #4c3c53;
+      }
+      body {
+        color: rgb(255, 255, 255);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="text-center my-5">Movimentação de Produto</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <form action="{{ url_for('movprod') }}" method="post">
+            <table>
+              <tr>
+                <td><label for="product">Produto:</label></td>
+                <td>
+                  <select class="form-control" id="product" name="product">
+                    {% for product in products %}
+                      <option value="{{ product[0] }}">{{ product[1] }}</option>
+                    {% endfor %}
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td><label for="type">Tipo de Movimentação:</label></td>
+                <td>
+                  <select class="form-control" id="type" name="type">
+                    <option value="SAIDA">Saída</option>
+                    <option value="ENTRADA">Entrada</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td><label for="price">Preço:</label></td>
+                <td><input type="number" class="form-control" id="price" name="price"></td>
+              </tr>
+              <tr>
+                <td><label for="GeneralInfo">Informações Gerais:</label></td>
+                <td>
+                  <textarea class="form-control" id="GeneralInfo" name="GeneralInfo" rows="3"></textarea>
+                </td>
+              </tr>
+            </table>
+            <div class="form-group text-center">
+              <button type="submit" class="btn btn-primary mr-2">Confirmar</button>
+              <a href="{{ url_for('index') }}" class="btn btn-secondary">Cancelar</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

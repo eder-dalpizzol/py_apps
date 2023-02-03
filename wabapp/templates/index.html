@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Index Page</title>
+    <!-- Add Material UI CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+    <!-- Add Custom CSS -->
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #9374a1;
+        height: 100vh;
+      }
+      .mdc-button {
+        width: 200px;
+        height: 50px;
+        color: white;
+        background-color: white;
+        color: #4c3c53;
+        background: #4c3c53;
+      }
+      .mdc-button--raised {
+        color: #4c3c53;
+        background: #4c3c53;
+      }
+      body {
+        color: rgb(255, 255, 255);
+      }
+      .action-button {
+        background-color: #4c3c53;
+        color: white;
+        font-size: 16px;
+        padding: 14px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+        width: 150px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Container for buttons -->
+    <div class="container">
+      <!-- Cadprod Button -->
+      <a href="/cadprod" style="margin: 16px;">
+        <button class="mdc-button mdc-button--raised">
+          Cadastrar Produto
+        </button>
+      </a>
+      <!-- Listprod Button -->
+      <a href="/listprod" style="margin: 16px;">
+        <button class="mdc-button mdc-button--raised">
+          Consultar Produtos
+        </button>
+      </a>
+      <!-- Movprod Button -->
+      <a href="/movprod" style="margin: 16px;">
+        <button class="mdc-button mdc-button--raised">
+          Movimentar Produtos
+        </button>
+      </a>
+      <!-- Report Button -->
+      <a href="/report" style="margin: 16px;">
+        <button class="mdc-button mdc-button--raised">
+          Relatório
+        </button>
+      </a>
+    </div>
+    <!-- Add Material UI JavaScript -->
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+  </body>
+</html>
