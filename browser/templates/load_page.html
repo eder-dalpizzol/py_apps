@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loaded Webpage</title>
+</head>
+<body>
+  <h5>Load a Webpage</h5>
+  <form action="/load_page" method="POST">
+      <label for="url">Enter a URL:</label>
+      <input type="text" id="url" name="url">
+      <input type="submit" value="Load">
+  </form>
+    <iframe src="{{ url }}" width="100%" height="500"></iframe>
+</body>
+</html>
